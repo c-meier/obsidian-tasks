@@ -16,6 +16,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     originalStatusCharacter: ' ',
                     precedingHeader: null,
+                    headings: [],
                     priority: Priority.None,
                     startDate: null,
                     scheduledDate: null,
@@ -33,6 +34,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     originalStatusCharacter: ' ',
                     precedingHeader: null,
+                    headings: [],
                     priority: Priority.None,
                     startDate: null,
                     scheduledDate: null,
@@ -67,6 +69,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     path: '',
                     precedingHeader: '',
+                    headings: [],
                 }),
                 Task.fromLine({
                     line: '- [ ] #task this does: task',
@@ -74,6 +77,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     path: '',
                     precedingHeader: '',
+                    headings: [],
                 }),
             ] as Task[];
             const input = 'description includes task';
@@ -104,6 +108,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     path: '',
                     precedingHeader: '',
+                    headings: [],
                 }),
                 Task.fromLine({
                     line: '- [ ] #task this includes the word as a tag',
@@ -111,6 +116,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     path: '',
                     precedingHeader: '',
+                    headings: [],
                 }),
                 Task.fromLine({
                     line: '- [ ] #task this does: task',
@@ -118,6 +124,7 @@ describe('Query', () => {
                     sectionIndex: 0,
                     path: '',
                     precedingHeader: '',
+                    headings: [],
                 }),
             ] as Task[];
             const input = 'description includes task';

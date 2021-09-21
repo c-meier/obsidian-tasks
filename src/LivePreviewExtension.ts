@@ -44,6 +44,7 @@ class LivePreviewExtension implements PluginValue {
             sectionStart: 0,
             sectionIndex: 0,
             precedingHeader: null,
+            headings: [],
         });
 
         // Only handle checkboxes of tasks.

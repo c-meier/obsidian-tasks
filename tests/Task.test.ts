@@ -23,6 +23,7 @@ describe('parsing', () => {
             sectionStart,
             sectionIndex,
             precedingHeader,
+            headings: [precedingHeader],
         });
 
         // Assert
@@ -54,6 +55,7 @@ describe('parsing', () => {
             sectionStart,
             sectionIndex,
             precedingHeader,
+            headings: [precedingHeader],
         });
 
         // Assert
@@ -86,6 +88,7 @@ describe('parsing', () => {
             sectionStart,
             sectionIndex,
             precedingHeader,
+            headings: [precedingHeader],
         });
 
         // Assert
@@ -116,6 +119,7 @@ describe('to string', () => {
             sectionStart: 0,
             sectionIndex: 0,
             precedingHeader: '',
+            headings: [],
         }) as Task;
 
         // Assert
@@ -135,6 +139,7 @@ describe('toggle done', () => {
             sectionStart: 0,
             sectionIndex: 0,
             precedingHeader: '',
+            headings: [],
         }) as Task;
         const toggled: Task = task.toggle()[0];
 
@@ -393,6 +398,7 @@ describe('toggle done', () => {
                 line,
                 path: '',
                 precedingHeader: '',
+                headings: [],
                 sectionStart: 0,
                 sectionIndex: 0,
             });

@@ -34,6 +34,7 @@ export class Task {
      */
     public readonly originalStatusCharacter: string;
     public readonly precedingHeader: string | null;
+    public readonly headings: string[];
 
     public readonly priority: Priority;
 
@@ -69,6 +70,7 @@ export class Task {
         sectionIndex,
         originalStatusCharacter,
         precedingHeader,
+        headings,
         priority,
         startDate,
         scheduledDate,
@@ -85,6 +87,7 @@ export class Task {
         sectionIndex: number;
         originalStatusCharacter: string;
         precedingHeader: string | null;
+        headings: string[];
         priority: Priority;
         startDate: moment.Moment | null;
         scheduledDate: moment.Moment | null;
@@ -101,6 +104,7 @@ export class Task {
         this.sectionIndex = sectionIndex;
         this.originalStatusCharacter = originalStatusCharacter;
         this.precedingHeader = precedingHeader;
+        this.headings = headings;
 
         this.priority = priority;
 
@@ -119,12 +123,14 @@ export class Task {
         sectionStart,
         sectionIndex,
         precedingHeader,
+        headings,
     }: {
         line: string;
         path: string;
         sectionStart: number;
         sectionIndex: number;
         precedingHeader: string | null;
+        headings: string[];
     }): Task | null {
         const regexMatch = line.match(Task.taskRegex);
         if (regexMatch === null) {
@@ -261,6 +267,7 @@ export class Task {
             sectionIndex,
             originalStatusCharacter: statusString,
             precedingHeader,
+            headings,
             priority,
             startDate,
             scheduledDate,

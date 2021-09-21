@@ -143,6 +143,8 @@ because the tasks starts before tomorrow. Only one of the dates needs to match.
     -   Always tries to match the closest heading above the task, regardless of heading level.
     -   `does not include` will match a task that does not have a preceding heading in its file.
     -   Matches case-insensitive (disregards capitalization).
+-   `any heading (includes|does not include) <string>`
+    -   Whether or not any of the heading containing the task includes the given string. A task is contained by a heading if the heading is before the task and its level is greater than than the last matching heading.
 
 ### Sub-Items
 
